@@ -1,4 +1,6 @@
 ﻿using EntityModel;
+using System.Collections.Generic;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -7,11 +9,11 @@ namespace DataAccessLayer
     public class TablewareYouNeedDAL
     {
         const string connectionString = @"Server=.;Database=TablewareYouNeed;Trusted_Connection=True;";
-        SqlConnection? sqlcon;
-        SqlParameter? param;
-        SqlDataReader? dr;
+        SqlConnection sqlcon;
+        SqlParameter param;
+        SqlDataReader dr;
 
-        public List<TablewareYouNeedEntity> GetProductse()
+        public List<TablewareYouNeedEntity> GetProducts()
         {
             // db call sp
             // db data to c# entity

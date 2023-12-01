@@ -8,13 +8,16 @@ namespace BAL
     public class TablewareYouNeedBAL
     {
 
-        TablewareYouNeedDAL? _objACCSDAL;
-        public List<TablewareYouNeedEntity> GetProductse()
+        TablewareYouNeedDAL _objACCSDAL;
+
+
+
+        public List<TablewareYouNeedEntity> GetProducts()
         {
             try
             {
                 _objACCSDAL = new TablewareYouNeedDAL();
-                return _objACCSDAL.GetProductse();
+                return _objACCSDAL.GetProducts();
             }
             catch (Exception exc)
             {
